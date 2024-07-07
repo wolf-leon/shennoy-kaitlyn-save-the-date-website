@@ -16,16 +16,14 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
       </main>
-      <footer className="w-full flex items-center justify-center py-3">
-        <Link
-          isExternal
-          className="flex items-center gap-1 text-current"
-          href="https://nextui-docs-v2.vercel.app?utm_source=next-pages-template"
-          title="nextui.org homepage"
-        >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">NextUI</p>
-        </Link>
+      <footer className="w-full flex items-center justify-center py-3" style={{
+        background: "linear-gradient(135deg, #228B22 50%, #32CD32 50%)", // Gradient background
+      }}>
+        <div className="text-white text-center">
+        <p className="font-bold text-xl mb-2">Shennoy | Kaitlyn - Wedding RSVP</p>
+        <p>Thank you for being a part of our special day!</p><br ></br>
+        <p>&copy; {new Date().getFullYear()} Shennoy & Kaitlyn. All rights reserved.</p>
+      </div>
       </footer>
     </div>
   );
