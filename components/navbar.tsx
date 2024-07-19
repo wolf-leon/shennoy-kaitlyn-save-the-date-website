@@ -11,9 +11,7 @@ export const Navbar = () => {
       maxWidth="xl"
       position="sticky"
       className="p-4 shadow-md"
-      style={{
-        background: "linear-gradient(135deg, #228B22 50%, #32CD32 50%)", // Gradient background
-      }}
+      style={{background: '#50C878', border: '4px solid #FFD700' }}
     >
       <NavbarContent
         className="basis-full flex justify-center"
@@ -24,8 +22,8 @@ export const Navbar = () => {
             className="flex justify-center items-center gap-1 text-white"
             href="/"
           >
-            <p className="font-bold text-xl md:text-4xl text-inherit">
-              Shennoy | Kaitlyn - Wedding RSVP
+            <p className="font-bold text-3xl md:text-4xl text-inherit">
+              Shennoy | Kaitlyn 
             </p>
           </NextLink>
         </NavbarBrand>

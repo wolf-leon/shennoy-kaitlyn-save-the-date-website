@@ -16,9 +16,7 @@ export default function DefaultLayout({
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-4">
         {children}
       </main>
-      <footer className="w-full flex items-center justify-center py-3" style={{
-        background: "linear-gradient(135deg, #228B22 50%, #32CD32 50%)", // Gradient background
-      }}>
+      <footer className="w-full flex items-center justify-center py-3" style={{background: '#50C878', border: '2px solid #FFD700' }}>
         <div className="text-white text-center">
         <p className="font-bold text-xl mb-2">Shennoy | Kaitlyn - Wedding RSVP</p>
         <p>Thank you for being a part of our special day!</p><br ></br>
