@@ -55,40 +55,41 @@ function CountdownTimer({ deadline, title }: CountdownTimerProps) {
             padding: '1.2rem 0'
         }}>
             
-            <div className="inline-block px-2 py-4 rounded-lg my-4" style={{ background: 'linear-gradient(135deg, #1E90FF 50%, #00BFFF 50%)' }}>
-            <h1 className="text-3xl font-bold text-white font-cursive">{title}</h1>
-          </div>
+            <div className="inline-block px-2 py-4 rounded-lg my-4 text-center" style={{ background: 'linear-gradient(135deg, #1E90FF 50%, #00BFFF 50%)' }}>
+                <h1 className="text-xl font-bold text-white font-cursive">{title}</h1>
+            </div>
 
             <div style={{
-                width: '80%',
+                width: '100%',
                 margin: 'auto',
                 display: 'flex',
                 justifyContent: 'center',
-                marginTop: '0.5rem'
+                marginTop: '0.5rem',
+                overflow: 'hidden'  // Ensure no overflow
             }}>
                 {
                     Object.entries(timeLeft).map(([unit, value], index, array) => (
-                        <div key={unit} className='text-center'>
+                        <div key={unit} className='text-center' style={{ margin: '0 0.3rem', minWidth: '40px' }}>
                             <div style={{
                                 display: 'flex',
                                 alignItems: 'center',
-                                fontSize: 'clamp(1.3rem, 2.5vw, 2.1rem)'
+                                fontSize: 'clamp(1rem, 2.5vw, 2rem)' // Adjust font size for responsiveness
                             }}>
                                 <p style={{
-                                    margin: '0 4px',
-                                    padding: '0.5rem',
+                                    margin: '0 2px',
+                                    padding: '0.3rem',
                                     background: 'linear-gradient(to bottom, #fdfdfd 50%, #edebeb 50%)',
-                                    width: '2.1rem',
+                                    width: '1.5rem', // Adjust width for smaller screens
                                     display: 'flex',
                                     justifyContent: 'center',
                                     fontWeight: 500,
                                     borderRadius: '5px'
                                 }}>{Math.floor(value / 10)}</p>
                                 <p style={{
-                                    margin: '0 4px',
-                                    padding: '0.5rem',
+                                    margin: '0 2px',
+                                    padding: '0.3rem',
                                     background: 'linear-gradient(to bottom, #fdfdfd 50%, #edebeb 50%)',
-                                    width: '2.1rem',
+                                    width: '1.5rem', // Adjust width for smaller screens
                                     display: 'flex',
                                     justifyContent: 'center',
                                     fontWeight: 500,
@@ -98,7 +99,7 @@ function CountdownTimer({ deadline, title }: CountdownTimerProps) {
                             </div>
                             <p style={{
                                 textTransform: 'capitalize',
-                                fontSize: 'clamp(0.8rem, 2vw, 1rem)',
+                                fontSize: 'clamp(0.6rem, 2vw, 1rem)', // Adjust font size for responsiveness
                                 marginTop: '5px',
                                 fontWeight: 'bold'
                             }}>{unit}</p>
